@@ -77,7 +77,7 @@ class Build(unittest.TestCase):
         subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")], check=True, capture_output=True)
         html = (ROOT / "public" / "index.html").read_text()
         self.assertTrue(html.startswith("<!doctype html>"))
-        self.assertIn("<title>Haze Check SG</title>", html)
+        self.assertIn("<title>Haze Check 🇸🇬</title>", html)
         self.assertNotIn("/*SHAPES*/", html)
         self.assertIn('fetch("data.json"', html)
 
