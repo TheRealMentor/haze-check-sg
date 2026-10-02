@@ -89,6 +89,7 @@ if a.keep_days and D["psi"]:
     last = max(D["psi"]); cut = (dt.datetime.strptime(last, "%Y-%m-%dT%H") - dt.timedelta(days=a.keep_days)).strftime("%Y-%m-%dT%H")
     D["psi"] = {k: v for k, v in D["psi"].items() if k >= cut}
     D["wx"] = {k: v for k, v in D["wx"].items() if k >= cut}
+    D["nea"] = [e for e in D["nea"] if e["d"] >= cut[:10]]
 
 D["psi"] = dict(sorted(D["psi"].items())); D["wx"] = dict(sorted(D["wx"].items()))
 if json.dumps([D["psi"], D["wx"], D["nea"]], sort_keys=True) != _before or "updated" not in D:

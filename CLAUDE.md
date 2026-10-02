@@ -12,7 +12,7 @@ data/nea.json        Hand-written summaries of NEA's daily Haze Situation Update
 public/data.json     Hourly PSI/PM2.5 by region, Changi weather, NEA summaries. Read by the page at load.
 public/index.html    Built page. Do not edit by hand; edit src/page.html and rebuild.
 scripts/fetch.py     Pulls PSI from data.gov.sg and Changi weather reports, merges into public/data.json.
-scripts/merge.py     Merges new readings/NEA entries into data.json (keeps the last 21 days).
+scripts/merge.py     Merges new readings/NEA entries into data.json (keeps the last 30 days).
 scripts/build.py     Builds public/index.html and syncs data/nea.json into public/data.json.
 scripts/dev.py        Serves public/ and rebuilds automatically on change; see Commands below.
 tests/               Offline tests (no network): python3 -m unittest discover tests

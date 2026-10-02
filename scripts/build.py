@@ -37,4 +37,4 @@ print("wrote public/index.html")
 
 # Keep the NEA summaries in public/data.json in sync with data/nea.json (the source of truth).
 subprocess.run([sys.executable, str(ROOT / "scripts" / "merge.py"), str(ROOT / "public" / "data.json"),
-                "--nea", str(ROOT / "data" / "nea.json")], check=True)
+                "--nea", str(ROOT / "data" / "nea.json"), "--keep-days", "30"], check=True)

@@ -69,7 +69,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=2, help="how many days back to fetch, including today")
     ap.add_argument("--date", help="fetch a single SGT date (YYYY-MM-DD)")
-    ap.add_argument("--keep-days", type=int, default=21)
+    ap.add_argument("--keep-days", type=int, default=30)
     a = ap.parse_args()
 
     today = dt.datetime.now(SGT).date()
