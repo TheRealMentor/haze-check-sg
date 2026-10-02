@@ -28,6 +28,11 @@
     --unh: #ec7b2d;
     --vunh: #d23c32;
     --haz: #7b2140;
+    --good-t: color-mix(in srgb, var(--good) 35%, #fff);
+    --mod-t: color-mix(in srgb, var(--mod) 35%, #fff);
+    --unh-t: color-mix(in srgb, var(--unh) 35%, #fff);
+    --vunh-t: var(--vunh);
+    --haz-t: var(--haz);
     --rain: #2f6db5;
     --shadow:
       0 1px 2px rgba(21, 34, 43, 0.05), 0 6px 18px rgba(21, 34, 43, 0.06);
@@ -49,6 +54,11 @@
       --unh: #ee8a3d;
       --vunh: #e0554b;
       --haz: #b0404f;
+      --good-t: var(--good);
+      --mod-t: var(--mod);
+      --unh-t: var(--unh);
+      --vunh-t: var(--vunh);
+      --haz-t: var(--haz);
       --rain: #6f9be0;
       --shadow: none;
       color-scheme: dark;
@@ -67,6 +77,11 @@
     --unh: #ee8a3d;
     --vunh: #e0554b;
     --haz: #b0404f;
+    --good-t: var(--good);
+    --mod-t: var(--mod);
+    --unh-t: var(--unh);
+    --vunh-t: var(--vunh);
+    --haz-t: var(--haz);
     --rain: #6f9be0;
     --shadow: none;
     color-scheme: dark;
@@ -1096,19 +1111,19 @@
   <section aria-labelledby="h-guide">
     <h2 id="h-guide">Understanding the numbers</h2>
     <div class="bands">
-      <div style="background: var(--good)">
+      <div style="background: var(--good-t)">
         <b>Good</b><span class="num">PSI 0–50</span>
       </div>
-      <div style="background: var(--mod)">
+      <div style="background: var(--mod-t)">
         <b>Moderate</b><span class="num">PSI 51–100</span>
       </div>
-      <div style="background: var(--unh)">
+      <div style="background: var(--unh-t)">
         <b>Unhealthy</b><span class="num">PSI 101–200</span>
       </div>
-      <div style="background: var(--vunh); color: #fff">
+      <div style="background: var(--vunh-t); color: #fff">
         <b>Very unhealthy</b><span class="num">PSI 201–300</span>
       </div>
-      <div style="background: var(--haz); color: #fff">
+      <div style="background: var(--haz-t); color: #fff">
         <b>Hazardous</b><span class="num">PSI above 300</span>
       </div>
     </div>
@@ -1283,7 +1298,7 @@
   // ---------- right now ----------
   function renderNow(){
     const f = frames[latest], b = band(f.max);
-    $("verdict").style.setProperty("--band", `var(${b.v})`);
+    $("verdict").style.setProperty("--band", `var(${b.v}-t)`);
     $("verdict").style.color = f.max > 200 ? "#fff" : "#111614";
     const topKeys = REG.filter(r => f.psi[r] === f.max);
     const tops = topKeys.map(r => RNAME[r]);
@@ -1308,7 +1323,7 @@
     if (ups.length){
       const u = ups[0], fb = /Very|Hazardous/.test(u.fc) ? "--vunh" : /Unhealthy/.test(u.fc) ? "--unh" : "--mod";
       const tm = $("tomorrow"); tm.hidden = false;
-      tm.innerHTML = `<span><b>NEA's forecast:</b> <span class="pill" style="background:var(${fb})">${u.fc}</span></span><span class="meta">Issued ${fmtDay(u.d)} evening, for the next 24 hours</span>`;
+      tm.innerHTML = `<span><b>NEA's forecast:</b> <span class="pill" style="background:var(${fb}-t)">${u.fc}</span></span><span class="meta">Issued ${fmtDay(u.d)} evening, for the next 24 hours</span>`;
     }
   }
 
@@ -1352,7 +1367,7 @@
       return `<button type="button" class="rrow" data-r="${r}" aria-expanded="${open}">
         <span class="nm">${RNAME[r]}</span>
         <span class="v">${v ?? "–"}${mapMetric === "pm" && v != null ? " µg/m³" : ""}</span>
-        <span class="pill" style="background:${b ? `var(${b.v})` : "var(--line)"};color:${cv > 200 ? "#fff" : "#111614"}">${b ? b.name : "No data"}</span>
+        <span class="pill" style="background:${b ? `var(${b.v}-t)` : "var(--line)"};color:${cv > 200 ? "#fff" : "#111614"}">${b ? b.name : "No data"}</span>
       </button>${open ? `<div class="towns">Roughly covers ${TOWNS[r]}.${pm != null ? ` PM2.5 (24-hour average): ${pm} µg/m³.` : ""}</div>` : ""}`;
     }).join("");
     $("rlist").querySelectorAll(".rrow").forEach(b => b.addEventListener("click", () => toggleRegion(b.dataset.r)));
@@ -1369,7 +1384,7 @@
       let best = fs[0]; fs.forEach(x => { if (x[0].max > best[0].max) best = x; });
       const v = best[0].max, b = band(v);
       const partial = fs.length < 20 ? (d === days[days.length-1] ? " (so far)" : " (part of day)") : "";
-      return `<button type="button" class="day" data-date="${d}" data-i="${best[1]}" style="background:var(${b.v});color:${v>200?"#fff":"#111614"}" aria-label="${fmtDay(d)}: worst PSI ${v}, ${b.name}${partial}"><span class="d">${fmtDay(d)}</span><span class="v">${v}</span><span class="l">${b.name}${partial}</span></button>`;
+      return `<button type="button" class="day" data-date="${d}" data-i="${best[1]}" style="background:var(${b.v}-t);color:${v>200?"#fff":"#111614"}" aria-label="${fmtDay(d)}: worst PSI ${v}, ${b.name}${partial}"><span class="d">${fmtDay(d)}</span><span class="v">${v}</span><span class="l">${b.name}${partial}</span></button>`;
     }).join("");
     document.querySelectorAll(".day[data-i]").forEach(b => b.addEventListener("click", () => { stop(); setIdx(+b.dataset.i); scrollToMap(); }));
   }
@@ -1440,7 +1455,7 @@
       const b = band(n.psi[1]);
       return `<li class="tli"><div class="tldate"><span class="dd">${dd}</span><span class="mm">${mm}</span></div><div class="tlbody">
         <p>${n.sum}</p>
-        <div class="tlmeta"><span>PSI ${n.psi[0]}–${n.psi[1]} at ${n.t} <span class="pill" style="background:var(${b.v})">${b.name}</span></span><span>Forecast: ${n.fc}</span><a href="${n.url}" target="_blank" rel="noopener">Read NEA's update ↗</a></div>
+        <div class="tlmeta"><span>PSI ${n.psi[0]}–${n.psi[1]} at ${n.t} <span class="pill" style="background:var(${b.v}-t)">${b.name}</span></span><span>Forecast: ${n.fc}</span><a href="${n.url}" target="_blank" rel="noopener">Read NEA's update ↗</a></div>
       </div></li>`;
     }).join("");
     const nUp = items.length;
