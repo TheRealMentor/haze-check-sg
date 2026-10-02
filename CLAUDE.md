@@ -14,6 +14,7 @@ public/index.html    Built page. Do not edit by hand; edit src/page.html and reb
 scripts/fetch.py     Pulls PSI from data.gov.sg and Changi weather reports, merges into public/data.json.
 scripts/merge.py     Merges new readings/NEA entries into data.json (keeps the last 21 days).
 scripts/build.py     Builds public/index.html and syncs data/nea.json into public/data.json.
+scripts/dev.py        Serves public/ and rebuilds automatically on change; see Commands below.
 tests/               Offline tests (no network): python3 -m unittest discover tests
 .github/workflows/   update-data.yml runs fetch+build twice daily and commits; deploy-pages.yml publishes public/.
 ```
@@ -24,6 +25,7 @@ tests/               Offline tests (no network): python3 -m unittest discover te
 python3 scripts/fetch.py            # yesterday + today; --days 7 for a week; --date 2026-09-29 for one day
 python3 scripts/build.py            # rebuild public/index.html after editing src/page.html or data/nea.json
 python3 -m http.server -d public    # preview at http://localhost:8000 (the page fetches data.json, so open it over http)
+python3 scripts/dev.py              # preview + auto-rebuild on save; one long-running command, no restarts needed
 python3 -m unittest discover tests  # run tests
 ```
 
