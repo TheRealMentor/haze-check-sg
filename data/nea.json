@@ -1,0 +1,667 @@
+[
+{
+"d": "2026-08-09",
+"kind": "notice",
+"title": "Haze Task Force on standby",
+"url": "https://www.nea.gov.sg/media/news/news/index/singapore-government-stand-ready-to-mitigate-impact-of-haze",
+"sum": "The Government Haze Task Force (28 agencies, chaired by NEA) said it was ready to act as hotspots grew in Sumatra and Kalimantan. Central PSI was 81 at 1pm. NEA said daily haze advisories would start once the 24-hr PSI went above 100."
+},
+{
+"d": "2026-09-04",
+"kind": "update",
+"t": "7pm",
+"psi": [
+83,
+116
+],
+"pm": [
+41,
+83
+],
+"fc": "High Moderate – Mid Unhealthy",
+"wx": "fair",
+"wxt": "Fair and occasionally windy",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "First daily update. The 24-hr PSI entered the Unhealthy range as smoke from fires in southern and central Sumatra and across Kalimantan drifted in. The region was mostly dry and more dry days were forecast.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-(04-september-2026)"
+},
+{
+"d": "2026-09-05",
+"kind": "update",
+"t": "6pm",
+"psi": [
+78,
+104
+],
+"pm": [
+33,
+56
+],
+"fc": "High Moderate – Low Unhealthy",
+"wx": "fair",
+"wxt": "Fair and occasionally windy",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Most of the region stayed dry. Smoke plumes over Sumatra and Kalimantan kept drifting towards Singapore, and NEA warned haze could continue while the fires stayed active.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-05-september-2026"
+},
+{
+"d": "2026-09-06",
+"kind": "update",
+"t": "6pm",
+"psi": [
+73,
+87
+],
+"pm": [
+38,
+66
+],
+"fc": "High Moderate – Low Unhealthy",
+"wx": "fair",
+"wxt": "Fair and windy",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Readings eased back into Moderate, but smoke from Sumatra and West Kalimantan was still drifting in. Some showers were forecast over Kalimantan, with Singapore and the rest of the region staying dry.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-06-september-2026"
+},
+{
+"d": "2026-09-07",
+"kind": "update",
+"t": "6pm",
+"psi": [
+63,
+85
+],
+"pm": [
+22,
+36
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "fair",
+"wxt": "Fair",
+"wind": null,
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "A quieter day with PM2.5 back in the Normal band. Smoke from Sumatra and West Kalimantan continued to drift towards Singapore and dry weather was expected to hold.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-07-september-2026"
+},
+{
+"d": "2026-09-08",
+"kind": "update",
+"t": "6pm",
+"psi": [
+62,
+74
+],
+"pm": [
+32,
+63
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "cloudy",
+"wxt": "Partly cloudy",
+"wind": null,
+"src": [
+"Sumatra",
+"Kalimantan",
+"Nearby fires"
+],
+"sum": "The lowest PSI of the first week. Some of the haze came from isolated fires nearby, on top of smoke from Sumatra and Kalimantan.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-08-september-2026"
+},
+{
+"d": "2026-09-09",
+"kind": "update",
+"t": "6pm",
+"psi": [
+74,
+98
+],
+"pm": [
+43,
+85
+],
+"fc": "High Moderate – Low Unhealthy",
+"wx": "dry",
+"wxt": "Dry",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "A dry day in Singapore and haze built up again, with PSI approaching 100. Showers were forecast for northern Sumatra but not over the fire areas.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-09-september-2026"
+},
+{
+"d": "2026-09-10",
+"kind": "update",
+"t": "6pm",
+"psi": [
+73,
+104
+],
+"pm": [
+38,
+70
+],
+"fc": "High Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Despite showers in Singapore, smoke from southern Sumatra drifted in and PSI touched Unhealthy again.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-10-september-2026"
+},
+{
+"d": "2026-09-11",
+"kind": "update",
+"t": "6pm",
+"psi": [
+69,
+88
+],
+"pm": [
+12,
+20
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "heavy",
+"wxt": "Heavy showers",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Heavy showers washed the air out and PM2.5 dropped to 12–20 µg/m³. The fires were still burning, so NEA kept the risk warning in place.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-11-september-2026"
+},
+{
+"d": "2026-09-12",
+"kind": "update",
+"t": "6pm",
+"psi": [
+67,
+79
+],
+"pm": [
+27,
+41
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers in the south and west",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Some haze from Kalimantan drifted in. Dry weather was forecast to return over central Sumatra.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-12-september-2026"
+},
+{
+"d": "2026-09-13",
+"kind": "update",
+"t": "6pm",
+"psi": [
+69,
+83
+],
+"pm": [
+31,
+60
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "dry",
+"wxt": "Dry",
+"wind": "SE or S",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Dense smoke plumes over Kalimantan, some heading towards Singapore. Dry weather was expected to continue over Kalimantan and southern Sumatra.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-13-september-2026"
+},
+{
+"d": "2026-09-14",
+"kind": "update",
+"t": "6pm",
+"psi": [
+88,
+117
+],
+"pm": [
+56,
+115
+],
+"fc": "High Moderate – Mid Unhealthy",
+"wx": "showers",
+"wxt": "Brief showers in a few areas",
+"wind": "ESE",
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "Winds shifted to blow from the east-southeast and carried dense Kalimantan smoke straight to Singapore. PM2.5 reached 115 µg/m³, and NEA said Singapore would likely be affected in the coming days.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-14-september-2026"
+},
+{
+"d": "2026-09-15",
+"kind": "update",
+"t": "6pm",
+"psi": [
+92,
+131
+],
+"pm": [
+43,
+74
+],
+"fc": "High Moderate – Mid Unhealthy",
+"wx": "dry",
+"wxt": "Dry",
+"wind": "ESE or SE",
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "The highest 24-hr PSI in NEA's updates up to that point (131). Because PSI is a 24-hour average, it still reflected the previous day's smoke, while hourly PM2.5 had already dropped after overnight showers in the region.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-15-september-2026"
+},
+{
+"d": "2026-09-16",
+"kind": "notice",
+"title": "Outlook for the second half of September",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/more-showers-expected-in-the-coming-fortnight-September-2026",
+"sum": "NEA's fortnightly weather outlook: winds mainly from the southeast or southwest, short thundery showers on most days, and rainfall near the long-term average."
+},
+{
+"d": "2026-09-16",
+"kind": "update",
+"t": "5pm",
+"psi": [
+71,
+89
+],
+"pm": [
+34,
+59
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "dry",
+"wxt": "Dry",
+"wind": "SE or S",
+"src": [
+"Sumatra"
+],
+"sum": "Air quality improved as showers fell over Kalimantan, though some smoke still drifted in from southern Sumatra.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-16-september-2026"
+},
+{
+"d": "2026-09-17",
+"kind": "update",
+"t": "5pm",
+"psi": [
+66,
+93
+],
+"pm": [
+46,
+78
+],
+"fc": "High Moderate – Low Unhealthy",
+"wx": "dry",
+"wxt": "Dry",
+"wind": "SE to SW",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "With winds from the southeast to southwest, smoke drifted over from southern and central Sumatra. Plumes were also seen over southwestern Kalimantan.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-17-september-2026"
+},
+{
+"d": "2026-09-18",
+"kind": "update",
+"t": "5pm",
+"psi": [
+64,
+86
+],
+"pm": [
+31,
+61
+],
+"fc": "High Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers in the north",
+"wind": "ESE or SE",
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "Kalimantan smoke drifted towards Singapore as both fire areas stayed dry.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-18-september-2026"
+},
+{
+"d": "2026-09-19",
+"kind": "update",
+"t": "5pm",
+"psi": [
+80,
+108
+],
+"pm": [
+29,
+66
+],
+"fc": "High Moderate – Mid Unhealthy",
+"wx": "showers",
+"wxt": "Showers in the centre and west",
+"wind": "ESE or SE",
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "Back into the Unhealthy range. Smoke from both Kalimantan and southern Sumatra was seen drifting towards Singapore, and NEA raised its forecast to mid Unhealthy.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-19-september-2026"
+},
+{
+"d": "2026-09-20",
+"kind": "update",
+"t": "5pm",
+"psi": [
+71,
+102
+],
+"pm": [
+24,
+73
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers in the north and east",
+"wind": "SE",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Smoke haze from Sumatra drifted in, pushing the 24-hr PSI just past 100 in one region.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-20-september-2026"
+},
+{
+"d": "2026-09-21",
+"kind": "update",
+"t": "6pm",
+"psi": [
+66,
+81
+],
+"pm": [
+20,
+33
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers over many areas",
+"wind": "SE",
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "Afternoon showers brought readings down. Heavy cloud cover meant satellites could not fully see the fires or smoke that day.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-(21-september-2026)"
+},
+{
+"d": "2026-09-22",
+"kind": "update",
+"t": "6pm",
+"psi": [
+59,
+77
+],
+"pm": [
+11,
+21
+],
+"fc": "Moderate",
+"wx": "showers",
+"wxt": "Showers over many areas",
+"wind": null,
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "Showers across Singapore and parts of Sumatra brought one of the lowest PM2.5 readings in NEA's evening updates (11–21 µg/m³). The forecast dropped to Moderate.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-22-september-2026"
+},
+{
+"d": "2026-09-23",
+"kind": "update",
+"t": "6pm",
+"psi": [
+57,
+65
+],
+"pm": [
+31,
+60
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Afternoon showers in some areas",
+"wind": null,
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "The lowest 24-hr PSI in NEA's evening updates in September. Dry weather over southern Sumatra and Kalimantan kept the fires going, but showers nearer Singapore were expected to limit the haze.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-23-september-2026"
+},
+{
+"d": "2026-09-24",
+"kind": "update",
+"t": "6pm",
+"psi": [
+62,
+76
+],
+"pm": [
+17,
+27
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers in the north",
+"wind": "ESE or SE",
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "A quieter day, but NEA flagged the risk of haze returning with winds forecast from the east-southeast or southeast.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-24-september-2026"
+},
+{
+"d": "2026-09-25",
+"kind": "update",
+"t": "6pm",
+"psi": [
+61,
+79
+],
+"pm": [
+17,
+35
+],
+"fc": "Moderate",
+"wx": "cloudy",
+"wxt": "Partly cloudy",
+"wind": null,
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "Dense plumes continued over the fire areas. Showers forecast for Singapore were expected to reduce the risk, so the forecast stayed Moderate.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-25-september-2026"
+},
+{
+"d": "2026-09-26",
+"kind": "update",
+"t": "6pm",
+"psi": [
+71,
+96
+],
+"pm": [
+46,
+96
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "dry",
+"wxt": "Dry",
+"wind": "SE or SW",
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "A dry day and moderate to dense haze from Kalimantan drifted in. PM2.5 nearly reached 100 µg/m³ by the evening.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-26-september-2026"
+},
+{
+"d": "2026-09-27",
+"kind": "update",
+"t": "7pm",
+"psi": [
+83,
+119
+],
+"pm": [
+12,
+24
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "heavy",
+"wxt": "Heavy showers late morning and afternoon",
+"wind": "SE",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Heavy showers cleared the air (PM2.5 12–24 µg/m³), but the 24-hr PSI still showed the overnight haze, reaching 119 in central Singapore.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-27-september-2026"
+},
+{
+"d": "2026-09-28",
+"kind": "update",
+"t": "6pm",
+"psi": [
+68,
+94
+],
+"pm": [
+64,
+138
+],
+"fc": "High Moderate – Mid Unhealthy",
+"wx": "showers",
+"wxt": "Brief showers in the north and east",
+"wind": "E or SE",
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "The highest PM2.5 in any of NEA's evening updates in September (138 µg/m³), as dense smoke from southern Sumatra and Kalimantan arrived. NEA forecast the 24-hr PSI would reach the mid Unhealthy range.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-28-september-2026"
+},
+{
+"d": "2026-09-29",
+"kind": "update",
+"t": "6pm",
+"psi": [
+107,
+157
+],
+"pm": [
+36,
+63
+],
+"fc": "High Moderate – Mid Unhealthy",
+"wx": "cloudy",
+"wxt": "Partly cloudy",
+"wind": null,
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "For the first time in September every region was Unhealthy at the evening reading, with PSI up to 157, the highest in NEA's updates so far. Smoke kept drifting in from Kalimantan and southern Sumatra.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-29-september-2026"
+},
+{
+"d": "2026-09-30",
+"kind": "update",
+"t": "6pm",
+"psi": [
+91,
+112
+],
+"pm": [
+6,
+18
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers over Singapore and the region",
+"wind": null,
+"src": [
+"Sumatra",
+"Kalimantan"
+],
+"sum": "Showers brought the lowest PM2.5 in NEA's evening updates in September (6–18 µg/m³), and PSI eased to 91–112. Smoke from southern Sumatra and Kalimantan was still drifting towards Singapore.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-30-september-2026"
+},
+{
+"d": "2026-10-01",
+"kind": "update",
+"t": "6pm",
+"psi": [
+60,
+73
+],
+"pm": [
+17,
+32
+],
+"fc": "Moderate – Low Unhealthy",
+"wx": "showers",
+"wxt": "Showers over several parts of Singapore",
+"wind": null,
+"src": [
+"Kalimantan",
+"Sumatra"
+],
+"sum": "Showers kept the air in the Moderate range, with PSI at 60–73. Smoke from southern Kalimantan drifted towards the vicinity of Singapore, and NEA warned that southeasterly or southerly winds could bring more haze.",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/haze-situation-update-1-october-2026"
+},
+{
+"d": "2026-10-01",
+"kind": "notice",
+"title": "Outlook for the first half of October",
+"url": "https://www.nea.gov.sg/media/news/advisories/index/thundery-showers-on-some-days-in-the-first-fortnight-of-october-2026",
+"sum": "NEA's fortnightly weather outlook: drier than the previous fortnight, winds from the southeast or southwest, thundery showers on some afternoons, and total rainfall below average."
+}
+]
