@@ -85,7 +85,7 @@ section{display:flex;flex-direction:column;gap:14px}
 .rv{font-family:var(--mono);font-size:24px;font-weight:500;fill:#101412;paint-order:stroke;stroke:rgba(255,255,255,.7);stroke-width:4px;pointer-events:none}
 .rn{font-size:15px;fill:#101412;opacity:.85;pointer-events:none;text-transform:uppercase;letter-spacing:.06em;paint-order:stroke;stroke:rgba(255,255,255,.6);stroke-width:3px}
 .rlist{display:flex;flex-direction:column}
-.rrow{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 4px;border-top:1px solid var(--line);cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;font:inherit;color:inherit;text-align:left;width:100%}
+.rrow{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:14px 4px;border-top:1px solid var(--line);cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;font:inherit;color:inherit;text-align:left;width:100%}
 .rrow:first-child{border-top:0}
 .rrow:hover{background:var(--bg)}
 .rrow[aria-expanded="true"]{background:var(--bg)}
@@ -192,7 +192,7 @@ footer{font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;ga
       </div>
       <div class="todo">
         <h3>What should I do?</h3>
-        <p class="small muted">Advice for the worst area, from NEA's guide for this PSI level. Your area may be better: check the map below.</p>
+        <p class="small muted">Advice for the worst area, from NEA's guide. Your area may be better — check the map below.</p>
         <div class="who">
           <div><b>Healthy adults</b><span id="adv0">–</span></div>
           <div><b>Elderly, pregnant women and children</b><span id="adv1">–</span></div>
@@ -217,7 +217,7 @@ footer{font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;ga
         </svg>
         <span class="maptag" id="maptag">Latest reading</span>
       </div>
-      <div class="card" style="padding:8px 14px">
+      <div class="card" style="padding:10px 14px">
         <div class="rlist" id="rlist"></div>
       </div>
     </div>
@@ -279,7 +279,7 @@ footer{font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;ga
       <div class="card">
         <span class="eyebrow">Why the number lags</span>
         <h3>PSI is a 24-hour average</h3>
-        <p class="muted">PSI averages the last 24 hours, so it can stay high after the air clears. On 27 Sep heavy rain cleaned the air, yet PSI still showed 119 that evening because the average still included the smoky hours before the rain.</p>
+        <p class="muted">PSI averages the last 24 hours, so it can stay high after the air clears. On 27 Sep, rain cleared the air, yet PSI still read 119 that evening since the average included the smoky hours beforehand.</p>
       </div>
     </div>
   </section>
@@ -318,7 +318,7 @@ footer{font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;ga
             <p class="small muted" id="rainNote">–</p>
           </div>
         </div>
-        <p class="small muted"><b>What is r?</b> A score from −1 to +1 for how closely two things move together. Near 0 means no clear link; beyond ±0.5 is strong. A plus sign means both rise together, a minus sign means one falls as the other rises. With one week of data from one station, treat these as hints rather than proof.</p>
+        <p class="small muted"><b>What is r?</b> A score from −1 to +1 for how closely two things move together: near 0 is no clear link, beyond ±0.5 is strong, plus means both rise together, minus means one falls as the other rises. One week of data from one station — treat these as hints, not proof.</p>
       </div>
     </div>
   </details>
@@ -595,7 +595,7 @@ function drawWhy(){
   const m = a => a.reduce((s,x)=>s+x,0)/a.length;
   const w = m(wet), d = m(dry);
   $("rainStat").textContent = `${w <= 0 ? "▼" : "▲"} ${Math.abs(w).toFixed(0)} PSI on average`;
-  $("rainText").textContent = `This week, in the 6 hours after rain at Changi, the worst PSI ${w <= 0 ? "fell" : "rose"} by about ${Math.abs(w).toFixed(0)} on average. After dry hours it ${d > 0 ? "rose" : "fell"} by about ${Math.abs(d).toFixed(0)}. That's only ${wet.length} rain hours at one station, but NEA's updates also credit showers for clearer air, for example on 11 and 27 Sep.`;
+  $("rainText").textContent = `This week, the worst PSI ${w <= 0 ? "fell" : "rose"} by about ${Math.abs(w).toFixed(0)} in the 6 hours after rain at Changi, against ${d > 0 ? "a rise" : "a fall"} of about ${Math.abs(d).toFixed(0)} after dry hours. That's just ${wet.length} rain hours at one station, but NEA's updates credit showers too, e.g. on 11 and 27 Sep.`;
 }
 
 // ---------- explore: weather lanes ----------
