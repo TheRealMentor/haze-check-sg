@@ -775,6 +775,22 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+    position: relative;
+  }
+  .merlion {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 140px;
+    height: auto;
+    color: var(--ink);
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  @media (max-width: 600px) {
+    .merlion {
+      width: 84px;
+    }
   }
   .loading {
     padding: 40px 18px;
@@ -1139,6 +1155,13 @@
   </section>
 
   <footer>
+    <svg class="merlion" aria-hidden="true" focusable="false" viewBox="0 0 240 360" xmlns="http://www.w3.org/2000/svg">
+      <g fill="currentColor">
+        <path d="M 120.0,22.0 Q 138.5,39.3 163.7,37.9 Q 166.8,63.0 187.0,78.2 Q 173.2,99.4 178.9,124.0 Q 154.7,131.4 143.3,153.9 Q 120.0,144.0 96.7,153.9 Q 85.3,131.4 61.1,124.0 Q 66.8,99.4 53.0,78.2 Q 73.2,63.0 76.3,37.9 Q 101.5,39.3 120.0,22.0 Z" />
+        <path d="M100,146 Q76,150 95,175 L145,175 Q164,150 140,146 Z" />
+        <path d="M95,175 C78,205 85,235 120,255 L100,320 Q140,300 150,280 Q165,300 215,310 C175,290 170,255 150,230 C160,210 155,190 145,175 Z" />
+      </g>
+    </svg>
     <span id="coverage"></span>
     <span
       >Contains information from the Pollutant Standards Index (PSI) dataset,
