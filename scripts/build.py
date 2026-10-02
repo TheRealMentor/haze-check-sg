@@ -3,7 +3,7 @@
 
 Usage: python3 scripts/build.py
 """
-import json, pathlib, subprocess, sys
+import json, pathlib, shutil, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 page = (ROOT / "src" / "page.html").read_text()
@@ -33,6 +33,7 @@ doc = f"""<!doctype html>
 """
 (ROOT / "public").mkdir(exist_ok=True)
 (ROOT / "public" / "index.html").write_text(doc)
+shutil.copyfile(ROOT / "src" / "merlion.png", ROOT / "public" / "merlion.png")
 print("wrote public/index.html")
 
 # Keep the NEA summaries in public/data.json in sync with data/nea.json (the source of truth).
