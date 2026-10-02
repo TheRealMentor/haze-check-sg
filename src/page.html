@@ -178,6 +178,7 @@ footer{font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;ga
         </div>
         <div style="display:flex;flex-direction:column;gap:8px">
           <div class="meta"><span class="big" id="bigN">–</span><span id="bigWhere">PSI (24-hour average), worst area</span></div>
+          <span class="small" id="bigPM"></span>
           <span class="trend" id="trend" hidden></span>
         </div>
       </div>
@@ -326,7 +327,7 @@ footer{font-size:.82rem;color:var(--muted);display:flex;flex-direction:column;ga
     </div>
     <div class="glossary">
       <p><b style="color:var(--ink)">PSI</b> (Pollutant Standards Index) is the number NEA uses for daily planning. It averages air quality over the past 24 hours, so it moves slowly.</p>
-      <p><b style="color:var(--ink)">PM2.5</b> is the amount of fine particles in the air, such as smoke. The 1-hour PM2.5 reading on haze.gov.sg shows the air over the past hour.</p>
+      <p><b style="color:var(--ink)">PM2.5</b> is the amount of fine particles in the air, such as smoke. This page shows the 24-hour average, alongside PSI; the 1-hour PM2.5 reading on haze.gov.sg reacts faster, for decisions in the next hour.</p>
       <p><b style="color:var(--ink)">Regions</b> follow NEA's five reporting areas. The town lists are our own rough grouping, by which region's centre each town is nearest to. They are not an official NEA list.</p>
     </div>
   </section>
@@ -421,13 +422,16 @@ function renderNow(){
   const f = frames[latest], b = band(f.max);
   $("verdict").style.setProperty("--band", `var(${b.v})`);
   $("verdict").style.color = f.max > 200 ? "#fff" : "#111614";
-  const tops = REG.filter(r => f.psi[r] === f.max).map(r => RNAME[r]);
+  const topKeys = REG.filter(r => f.psi[r] === f.max);
+  const tops = topKeys.map(r => RNAME[r]);
   const topTxt = tops.length > 1 ? tops.slice(0,-1).join(", ") + " and " + tops.at(-1) : tops[0];
   $("worstTag").textContent = tops.length > 1 ? `Worst areas: ${topTxt}` : `Worst area: ${topTxt}`;
   $("lvl").textContent = b.name;
   $("say").textContent = b.say;
   $("bigN").textContent = f.max;
   $("bigWhere").textContent = tops.length > 1 ? `PSI (24-hour average) in the ${topTxt} regions, the worst areas` : `PSI (24-hour average) in the ${topTxt} region, the worst area`;
+  const pmVals = topKeys.map(r => f.pm[r]).filter(v => v != null);
+  $("bigPM").textContent = pmVals.length ? `PM2.5 (24-hour average): ${Math.min(...pmVals) === Math.max(...pmVals) ? pmVals[0] : `${Math.min(...pmVals)}–${Math.max(...pmVals)}`} µg/m³` : "";
   b.adv.forEach((a,i) => $("adv"+i).textContent = a);
   // trend over last 6 hours
   let j = latest - 6; while (j > 0 && frames[j].gap) j--;
@@ -479,11 +483,12 @@ function render(){
   $("rlist").innerHTML = order.map(r => {
     const v = f.psi[r], b = v == null ? null : band(v);
     const open = openRegion === r;
+    const pm = f.pm[r];
     return `<button type="button" class="rrow" data-r="${r}" aria-expanded="${open}">
       <span class="nm">${RNAME[r]}</span>
       <span class="v">${v ?? "–"}</span>
       <span class="pill" style="background:${b ? `var(${b.v})` : "var(--line)"};color:${v > 200 ? "#fff" : "#111614"}">${b ? b.name : "No data"}</span>
-    </button>${open ? `<div class="towns">Roughly covers ${TOWNS[r]}.</div>` : ""}`;
+    </button>${open ? `<div class="towns">Roughly covers ${TOWNS[r]}.${pm != null ? ` PM2.5 (24-hour average): ${pm} µg/m³.` : ""}</div>` : ""}`;
   }).join("");
   $("rlist").querySelectorAll(".rrow").forEach(b => b.addEventListener("click", () => toggleRegion(b.dataset.r)));
   placeCursor();
